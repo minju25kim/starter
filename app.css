@@ -130,13 +130,110 @@ table {
 /*-----------------------------------------------------------------*/
 body {
   background-color: #60a9ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 .pricing-table {
   background-color: #fff;
   border-radius: 10px;
+  padding: 15px 25px;
+  text-align: center;
+  text-transform: uppercase;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   box-sizing: border-box;
+  width: 100%;
+  max-width: 960px;
+}
+
+.pricing-plan {
+  border-right: 1px solid #e1f1ff;
+  font-family: "Open-Sans", sans-serif;
+  padding: 25px 50px;
+}
+
+.pricing-plan:last-child {
+  border-right: none;
+}
+
+@media (min-width: 900px) {
+  .pricing-table {
+    flex-direction: row;
+  }
+}
+@media (max-width: 900px) {
+  .pricing-plan {
+    border-right: none;
+  }
+  .pricing-plan {
+    border-bottom: 1px solid #e1f1ff;
+  }
+  .pricing-plan:last-child {
+    border-bottom: none;
+  }
+}
+.pricing-img {
+  margin-bottom: 25px;
+  max-width: 100%;
+}
+.pricing-header {
+  color: #888;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 50px;
+}
+.pricing-features-item {
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 15px 0;
+  border-top: 1px solid #e1f1ff;
+  border-bottom: 1px solid #e1f1ff;
+  color: #016ff9;
+}
+.pricing-features-item:last-child {
+  border-top: none;
+}
+.pricing-price {
+  font-weight: 700;
+  color: #016ff9;
+  display: block;
+  font-size: 32px;
+  margin-top: 20px;
+}
+
+.pricing-button {
+  border: 1px solid #9dd1ff;
+  border-radius: 10px;
+  padding: 15px 35px;
+  margin: 25px 0;
+  display: inline-block;
+  text-decoration: none;
+  color: #348efe;
+  transition: background-color 200ms ease-in-out;
+}
+.pricing-button:hover,
+.pricing-button:focus {
+  background-color: #60a9ff;
+  color: #fff;
+}
+.is-featured {
+  border: 1px solid #9dd1ff;
+  border-radius: 10px;
+  padding: 15px 35px;
+  margin: 25px 0;
+  display: inline-block;
+  text-decoration: none;
+  background-color: #48aaff;
+  color: #fff;
+  transition: background-color 200ms ease-in-out;
+}
+.is-featured:hover,
+is-featured:focus {
+  background-color: #016ff9;
 }
